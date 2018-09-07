@@ -4,6 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : Activity() {
 
@@ -26,6 +27,9 @@ class MainActivity : Activity() {
         showCount.setText(count.toString())
     }
 
-
+    fun toast(view: View){
+        val toast = Toast.makeText(applicationContext, "Here I am", Toast.LENGTH_SHORT)
+        toast.show()
+    }
 
 }
