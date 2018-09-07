@@ -2,7 +2,8 @@ package io.github.sshnakamoto.startkotlin
 
 import android.app.Activity
 import android.os.Bundle
-import android.widget.Toast
+import android.view.View
+import android.widget.TextView
 
 class MainActivity : Activity() {
 
@@ -11,5 +12,20 @@ class MainActivity : Activity() {
         setContentView(R.layout.activity_main)
 
     }
+
+    /*
+    * Get view value and add plus one
+    * */
+    fun count(view: View){
+        val showCount = findViewById<TextView>(R.id.count_view)
+        val countString = showCount.text.toString()
+
+        var count: Int = Integer.parseInt(countString)
+        count++
+
+        showCount.setText(count.toString())
+    }
+
+
 
 }
